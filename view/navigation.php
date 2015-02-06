@@ -3,7 +3,7 @@
 ?>
 <nav>
     <ul>
-        <li><a href="<?php echo $path . "post.php"?>">Blog Post Form</a></li>
+        <button type="button"><li> <a  href="<?php echo $path . "post.php"?>">Blog Post Form</a></li></button>
     </ul>
 </nav>
 

@@ -7,8 +7,8 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <link href="../Blog-Style.css" rel="stylesheet" type="text/css"/>
         <title></title>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
 
