@@ -1,16 +1,23 @@
 <?php
 
-$path = "/MiguelB-Blog/";
-/*This is the pathway to my blog*/
+    require_once(__DIR__ . "/Database.php");
+    session_start();
+    $path = "/MiguelB-Blog/";
+    /* This is the pathway to my blog */
 
-$host = "localhost";
-/*This is where my blog host at*/
+    $host = "localhost";
+    /* This is where my blog host at */
 
-$username = "root";
-/*This is the username at localhost*/
+    $username = "root";
+    /* This is the username at localhost */
 
-$password = "root";
-/*This is the password at localhost*/
+    $password = "root";
+    /* This is the password at localhost */
 
-$database = "blog_db";
-/*This is the name of my database*/
+    $database = "blog_db";
+    /* This is the name of my database */
+    
+   if(!isset($_SESSION["connection"])){ 
+    $connection = new Database($host, $username, $password, $database);
+    $_SESSION["connection"] = $connection;
+   }
