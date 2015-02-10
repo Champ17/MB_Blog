@@ -2,26 +2,7 @@
 
 require_once (__DIR__ . "/../model/config.php");
 
-$connection = new mysqli($host, $username, $password);
-
-if ($connection->connect_error) {
-    die("Error: " . $connection->connect_error);
-}
-
-$exists = $connection->select_db($database);
-
-if (!$exists) {
-  $query = $connection->query("CREATE DATABASE $database");
-  
-  if($query){
-      echo "Successsfully created database:" . $database;
-  } 
-}
-else{
-     echo "Database already exist.";
-}
-
-$query = $connection->query("CREATE TABLE posts("
+$query = $_SESSION["connection"]->query("CREATE TABLE posts("
         . "id int(11) NOT NULL AUTO_INCREMENT,"
         . "title varchar(255)NOT NULL,"
         . "post text NOT NULL,"
@@ -30,5 +11,8 @@ $query = $connection->query("CREATE TABLE posts("
 if($query){
     echo "Successfully create table: post";
 }
+else{
+  echo "<p>" . $_SESSION["connection"]->error . "</p>";    
+}
 
-$connection->close();
+

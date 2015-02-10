@@ -24,25 +24,25 @@ class Database {
     }
 
     public function closeConnection() {
-     if(isset($this->connection)){
-         $this->connection->close();
-     }   
+        if (isset($this->connection)) {
+            $this->connection->close();
+        }
     }
 
     public function query($string) {
         $this->openConnection();
-        
+
 
         $query = $this->connection->query($string);
-        
-        $this->closeConnection();
-        
-        if(!$query){
+
+
+
+        if (!$query) {
             $this->error = $this->connection->error;
         }
-        
-        
-        return query;
+
+        $this->closeConnection();
+        return $query;
     }
 
 }
