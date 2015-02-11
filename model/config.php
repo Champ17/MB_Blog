@@ -2,6 +2,8 @@
 
     require_once(__DIR__ . "/Database.php");
     session_start();
+    session_regenerate_id(true);
+    
     $path = "/MiguelB-Blog/";
     /* This is the pathway to my blog */
 
@@ -16,8 +18,8 @@
 
     $database = "blog_db";
     /* This is the name of my database */
-    
-   if(!isset($_SESSION["connection"])){ 
+   
+   if(!isset($_SESSION["connection"])){
     $connection = new Database($host, $username, $password, $database);
     $_SESSION["connection"] = $connection;
    }

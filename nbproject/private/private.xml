@@ -5,6 +5,7 @@
         <group>
             <file>file:/C:/xampp/htdocs/MiguelB-Blog/controller/create-post.php</file>
             <file>file:/C:/xampp/htdocs/MiguelB-Blog/model/config.php</file>
+            <file>file:/C:/xampp/htdocs/MiguelB-Blog/post.php</file>
             <file>file:/C:/xampp/htdocs/MiguelB-Blog/model/Database.php</file>
             <file>file:/C:/xampp/htdocs/MiguelB-Blog/controller/create-db.php</file>
         </group>
