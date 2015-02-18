@@ -9,10 +9,9 @@
             . "PRIMARY KEY (id))");
 
     if($query){
-        echo "Successfully create table: post";
+        echo "<p>Successfully create table: posts</p>";
     }
     else{
       echo "<p>" . $_SESSION["connection"]->error . "</p>";    
     }
-
 

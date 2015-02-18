@@ -28,14 +28,14 @@ class Database {
                 echo "<p>Successfully created database: " . $database . "</p>";
             }
         } else {
-            echo "<p>Datbase already exists </p>";
+            echo "Datbase already exists.";
         }
     }
 
     public function openConnection() {
         $this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
         if ($this->connection->connect_error) {
-            die("Error: " . $this->connection->connect_error);
+            die("<p>Error: " . $this->connection->connect_error . "<p>");
         }
     }
 
@@ -58,6 +58,7 @@ class Database {
         }
 
         $this->closeConnection();
+       
         return $query;
     }
 
